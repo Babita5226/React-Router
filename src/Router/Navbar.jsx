@@ -16,7 +16,11 @@ const NavBar = () => {
   };
   return (
     <div>
-      <Navbar bg="dark" data-bs-theme="dark">
+      <Navbar
+        bg="dark"
+        data-bs-theme="dark"
+        className="fixed inset-x-0 top-0 z-10 w-full "
+      >
         <Container>
           <Navbar.Brand href="#home">Router</Navbar.Brand>
           <Nav className="me-auto">
@@ -25,6 +29,9 @@ const NavBar = () => {
             </Nav.Link>
             <Nav.Link>
               <Link to="/about"> About</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/pagination"> Product</Link>
             </Nav.Link>
             {isLoggedIn ? (
               <Nav>

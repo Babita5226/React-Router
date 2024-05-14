@@ -5,6 +5,7 @@ import Homepage from "./Router/Homepage";
 import About from "./Router/About";
 import NavBar from "./Router/Navbar";
 import ProtectedRoutes from "./Router/ProtectedRoutes";
+import Pagination from "./Pagination/Pagination";
 function App() {
   return (
     <div>
@@ -13,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route element={<ProtectedRoutes />}>
           <Route path="/home" element={<Homepage />} />
+          <Route path="/pagination" element={<Pagination />} />
           <Route path="/about" element={<About />} />
         </Route>
       </Routes>
